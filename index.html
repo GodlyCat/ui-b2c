@@ -144,6 +144,8 @@
     <script>
       function makePwdToggler(pwd){
         // Create show-password checkbox
+        var divWithText = document.createElement('div');
+        divWithText.appendChild(document.createTextNode('show password'));
         var checkbox = document.createElement('input');
         checkbox.setAttribute('type', 'checkbox');
         var id = pwd.id + 'toggler';
@@ -152,6 +154,7 @@
         label.setAttribute('for', id);
         label.appendChild(document.createTextNode('show password'));
       var div = document.createElement('div');
+        div.appendChild(divWithText);
         div.appendChild(checkbox);
         div.appendChild(label);
       // Add show-password checkbox under password input
